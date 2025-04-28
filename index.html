@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Elizabethtown SAP
+        <!-- &ndash; 2019 - 2023 -->
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="images/city-logo.png" type="image/x-icon" />
+
+    <!-- Libre Franklin font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+    <!-- Main container with side-panel and map -->
+    <div id="container">
+
+        <!-- Side panel: header, legend, and controls -->
+        <div id="side-panel">
+            <h1>
+                Elizabethtown Safety Action Plan
+            </h1>
+
+            <hr />
+
+            <p>
+                This interactive map was developed for the Elizabethtown Safety Action
+                Plan. Please use the below legend to toggle on each layer as you
+                navigate the map.
+            </p>
+
+            <!-- Custom legend container -->
+            <div id="legend"></div>
+            <!-- Dropdown filters -->
+            <p>
+                The dropdown menus below can filter crashes in the map via the manner
+                of collision or by filtering pedestrian, bicyclist, motorcyclist,
+                intersection or motor vehicle crashes.
+            </p>
+
+            <div id="manner-dropdown" class="dropdown">
+                <select id="collision-filter" class="dropdown-select">
+                    <option value="">All Manners of Collision</option>
+                </select>
+                <select id="mode-filter" class="dropdown-select">
+                    <option value="">All Crash Modes</option>
+                    <option value="Bicyclists">Bicyclists</option>
+                    <option value="Pedestrians">Pedestrians</option>
+                    <option value="Motorcyclists">Motorcyclists</option>
+                    <!-- <option value="Intersection Crashes">Intersection Crashes</option> -->
+                    <option value="Motor Vehicles">Motor Vehicles</option>
+                </select>
+            </div>
+
+            <p>
+                Use the time slider below to filter crashes additionally by time of
+                day. Crashes are grouped in 3-hour periods.
+            </p>
+
+            <!-- Time slider -->
+            <div id="slider-controls">
+                <label>
+                    <span id="slider-label">All Crashes</span>
+                    <input type="range" min="0" max="8" value="0" step="1" class="time-slider" />
+                </label>
+            </div>
+
+            <p>
+                Map designed courtesy of
+                <a target="_blank" href="https://www.palmernet.com/">Palmer Engineering</a>.
+            </p>
+
+            <hr />
+
+            <!-- Inside your #side-panel div, after the other elements -->
+            <div id="logos">
+                <img src="images/pec-logo.png" alt="PEC Logo" />
+                <img src="images/city-logo.png" alt="City Logo" />
+            </div>
+
+
+        </div>
+        <!-- Map container -->
+        <div id="map">
+            <!-- Optional: Spinner for data loading -->
+            <div class="spinner-container">
+                <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                        .spinner_nOfF {
+                            animation: spinner_qtyZ 2s cubic-bezier(0.36, 0.6, 0.31, 1) infinite;
+                        }
+
+                        .spinner_fVhf {
+                            animation-delay: -0.5s;
+                        }
+
+                        .spinner_piVe {
+                            animation-delay: -1s;
+                        }
+
+                        .spinner_MSNs {
+                            animation-delay: -1.5s;
+                        }
+
+                        @keyframes spinner_qtyZ {
+                            0% {
+                                r: 0;
+                            }
+
+                            25% {
+                                r: 3px;
+                                cx: 4px;
+                            }
+
+                            50% {
+                                r: 3px;
+                                cx: 12px;
+                            }
+
+                            75% {
+                                r: 3px;
+                                cx: 20px;
+                            }
+
+                            100% {
+                                r: 0;
+                                cx: 20px;
+                            }
+                        }
+                    </style>
+                    <circle class="spinner_nOfF" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_fVhf" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_piVe" cx="4" cy="12" r="3" />
+                    <circle class="spinner_nOfF spinner_MSNs" cx="4" cy="12" r="3" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <!-- import d3 library  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.1.1/d3.min.js"
+        integrity="sha512-COTaPOlz12cG4fSfcBsxZsjauBAyldqp+8FQUM/dZHm+ts/jR4AFoJhCqxy8K10Jrf3pojfsbq7fAPTb1XaVkg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom JS -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
