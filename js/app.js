@@ -455,7 +455,7 @@
     layersLabels[hinLabel] = HINLayer;
 
     const highwayPlanSymbol = `<span style="display:inline-block; width:20px; height:4px; background-color:#18b445; margin-right:9px; vertical-align:middle;"></span>`;
-    const highwayLabel = `<span class="legend-text" style="color:#1F389B; display:inline-block;">
+    const highwayLabel = `<span class="legend-text" style="color:#18b445; display:inline-block;">
         ${highwayPlanSymbol}Current Highway Plan Projects
       </span>`;
     layersLabels[highwayLabel] = highwayPlanLayer;
