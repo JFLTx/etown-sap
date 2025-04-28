@@ -176,9 +176,9 @@
   };
 
   const basemapThumbnails = {
-    Imagery: "images/imagery-thumb.jpg",
-    "Dark Gray": "images/darkTopo-thumb.JPG",
-    OpenStreetMap: "images/OSM-thumb.JPG",
+    Imagery: "images/imagery-thumb1.jpg",
+    "Dark Gray": "images/darkTopo-thumb1.jpg",
+    OpenStreetMap: "images/OSM-thumb1.jpg",
   };
 
   imagery.addTo(map);
