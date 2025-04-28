@@ -357,7 +357,7 @@
       pane: "bottom",
     };
     const highwayPlanStyle = {
-      color: "##18b445",
+      color: "#18b445",
       weight: 5,
       fillOpacity: 0,
       dashArray: "5, 8",
@@ -454,7 +454,7 @@
       </span>`;
     layersLabels[hinLabel] = HINLayer;
 
-    const highwayPlanSymbol = `<span style="display:inline-block; width:20px; height:4px; background-color:##18b445; margin-right:9px; vertical-align:middle;"></span>`;
+    const highwayPlanSymbol = `<span style="display:inline-block; width:20px; height:4px; background-color:#18b445; margin-right:9px; vertical-align:middle;"></span>`;
     const highwayLabel = `<span class="legend-text" style="color:#1F389B; display:inline-block;">
         ${highwayPlanSymbol}Current Highway Plan Projects
       </span>`;
